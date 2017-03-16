@@ -1,0 +1,239 @@
+@charset "utf-8";
+/* CSS Document */
+
+ 
+body{
+	margin:0px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	min-width:1000px;
+}
+
+/*
+header{
+	margin:auto;
+	padding:10px;
+	font-size:30px;
+	width:500px;
+	text-align:center;
+	margin-top:20px;
+}
+*/
+
+section{
+	margin-top:20px;	
+}
+section table tr td input{
+	width:100%;
+	height:35px;
+	outline:none;
+	font-size:14px;
+}
+.registros{
+	margin:auto;
+	width:1260px;
+	margin-top:20px;
+	border:1px solid #6F96DF;
+	height:auto;
+	padding:10px;
+}
+
+.formulario table tr td{
+	padding:10px;
+}
+.formulario table tr td input{
+	width:100%;
+	outline:none;
+}
+.formulario table tr td select{
+	width:100%;
+	height:30px;
+	outline:none;
+}
+.bien{
+	background-color:#3CBE34;
+	text-align:center;
+	font-size:14px;
+	color:#FFF;
+	padding:5px;
+}
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////*/
+/* Seccion para el menu del sistema */ 
+/* ///////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Elimina todos los margenes de la pagina Web */
+*
+{
+  margin:0;
+  padding:0;
+}
+
+header
+{
+    width:100%;
+    margin-top:10px;
+    height:150px;
+    overflow:hidden;
+    position:relative;
+}
+
+nav
+{
+  margin:20px auto; /* Centrar el menú */
+  max-width:1000px; /* Ancho Máximo en pantalla */
+  width:90%;
+  top:-20px;
+  position:absolute;
+  left:0;
+  right:0;
+}
+
+/* Dando formato al menu de navegacion, las listas */
+nav  ul
+{
+  list-style:none; /* Se suprime las viñetas */
+}
+
+/* Significa que los "ul" directo solamente de "nav", solo se aplica el "ul"
+de primer nivel */
+
+nav > ul
+{
+  background:#000;
+  display:table; /* Tengan la misma longuitud cada opcion del menú */
+  width:100%;
+  position:relative; /* Se utiliza para el menú desplegable */
+
+}
+
+nav > ul li
+{
+  display:table-cell; /* Para que tengan una posicion de celda, los elementos "li" */
+}
+
+/* Que se oculte y muestre el Submenu */
+nav > ul > li:hover > ul
+{
+  display:block;
+  height:100%; /* Para que se muestre el submenu cuando se pase el raton en "categoria" */
+}
+
+nav > ul > li > ul
+{
+  display:block;
+  position:absolute; /* Para que sea el menú desplegable  */
+  background:#000;
+  left:0;
+  right:0;
+  overflow:hidden;
+  height:0%;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+  -ms-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Para hacer la barra del menu con el fondo negro */
+nav > ul li a
+{
+  color:#fff; /*Color de las letras, del menu */
+  display:block; /* Para cambiar el ancho y largo a las opciones del menu etiqueta "a" */
+  line-height:20px;
+  padding:20px;
+  position:relative; /* Para el menu desplegable */
+  text-align:center;
+  text-decoration:none; /* Elimina el subrayado de las opciones */
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+  -ms-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  transition: all 0.3s ease;
+
+}
+
+/* Efecto de transición, selecciona las opciones del submenu de "Categoria" */
+nav > ul > li > ul > li a:hover
+{
+  background:#5da5a2;
+}
+
+/* Desaparecer los iconos y mostrarse con el efecto ocultar con el boton */
+nav > ul > li > a span
+{
+  background:#174459;
+  display:block; /* Ya que son elementos en linea */
+  height:100%; /* Ocupen el alto completo del boton  */
+  width:100%;  /* Ocupen el ancho completo del boton  */
+  left:0;
+  position:absolute;
+  top:-55px;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+  -ms-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  transition: all 0.3s ease;
+
+}
+
+/* Centrando los iconos de los botones del menú  */
+nav > ul > li > a span .icon
+{
+  display:block;
+  line-height:60px;
+}
+
+/* Efecto para que se oculte el menu, es decir que baje el recuadro  */
+nav > ul > li > a:hover > span
+{
+  top:0px;
+}
+
+/* Mostrando el submenu */
+nav > ul > li:hover > ul
+{
+  display:block;
+  height:100%;
+}
+
+/* Centrando los iconos de los botones */
+nav > ul > li > a span .icon
+{
+  display:block;
+  line-height:60px;
+
+}
+
+
+/* Agregando los colores a los botones que se ocultan */
+nav ul li a .primero
+{
+  background:#0e5061;
+}
+
+nav ul li a .segundo
+{
+  background:#5da5a2;
+}
+
+nav ul li a .tercero
+{
+  background:#f25724;
+}
+
+nav ul li a .cuarto
+{
+  background:#174459;
+}
+
+nav ul li a .quinto
+{
+  background:#37ad49;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////*/
+/* Se termina la seccion del menu general del sistema*/
+/* ///////////////////////////////////////////////////////////////////////////////////////*/
+
+
