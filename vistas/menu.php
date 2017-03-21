@@ -31,7 +31,9 @@ session_start();
                 <li><a href = "index_puesto.php">Puestos</a></li>
                 <li><a href = "index_depto.php">Departamentos</a></li>
                 <li><a href = "index_usuario.php">Usuarios</a></li>
-                <li><a href = "index_componentes.php">Componentes</a></li>                
+                <li><a href = "index_marca.php">Marcas</a></li>
+                <li><a href = "index_modelos.php">Modelos</a></li>                                                
+                <li><a href = "index_componentes.php">Componentes</a></li>
               </ul>
 
             <li><a href = "#"><span class = "segundo"><i class = "icon icon-tag"></i></span>Busquedas</a>

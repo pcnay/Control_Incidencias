@@ -862,7 +862,7 @@ function agregaModelo(){
 				$('#pro').val('Registro');
 				$('#mensaje').addClass('bien').html('Registro completado con exito').show(200).delay(2500).hide(200);
 				// .addClass('bien') = Es el valor de la seccion del CSS correspondiente a "bien"
-				$('#agrega-modelos').html(registro); // Desplega el valor retornado de "success", lo que arrojo "capturas_depstos.php"
+				$('#agrega-modelos').html(registro); // Desplega el valor retornado de "success", lo que arrojo "capturas_modelos.php"
 				return false;
 			}
 			else
