@@ -42,9 +42,6 @@
 		}
 }
 
-	$ing = new validar();
-	$array = $ing->identificar($usuario,$clave);
-
 	if ($boton == 'cerrar')
 	{
 		session_start();
@@ -64,5 +61,8 @@
 			$_SESSION['nombre'] = $array[1];
 		}
 	}
+
+	$ing = new validar();
+	$array = $ing->identificar($usuario,$clave);
 
 ?>

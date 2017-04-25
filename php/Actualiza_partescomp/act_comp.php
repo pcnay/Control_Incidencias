@@ -4,138 +4,151 @@
 
 			//  cada ../ es una carpeta que sube, en este caso son dos carpetas "Deptos" y "php"
 
-$campo_act = addslashes($_POST['campo_act']);
-$arreglo_marcas[0] = 'HP';
-$arreglo_marcas[1] = 'DELL';
-$arreglo_marcas[2] = 'LEXMARK';
-$arreglo_marcas[3] = 'EPSON';
+//$campo_act = addslashes($_POST['campo_act']);
+$arreglo_marcas = array (
+	19=>'CANNON',
+	18=>'HP',
+ 	9=>'DELL',
+	14=>'XEROX',
+	16=>'EPSON',
+	17=>'KODAK',
+	20=>'LENOVO',
+	15=>'LEXMARK',
+	11=>'WESTERN DIGITAL',
+);
 
-$arreglo_modelos[0] = 'ELITEDESK 705 G1 SFF'
-$arreglo_modelos[1] = 'OPTIPLEX 960'
-$arreglo_modelos[2] = 'OPTIPLEX 990';
+$arreglo_modelos = array (
+	27=>'COMPAQ DC7800',
+	28=>'COMPAQ PRO 6305 SFF',
+ 	26=>'DR-2050C',
+	1=>'ELITEDESK 705 G1 SFF',
+	16=>'ELITEDESK 705 G2',
+	22=>'FX-2190',
+	11=>'HDTG',
+	25=>'LASERJET 5000 COLOR',
+	30=>'LASERJET M401DNE',
+	21=>'MX711DE',
+	20=>'OFFICEJET PRO 8100',
+	17=>'OPTIPLEX 620',
+	7=>'OPTIPLEX 745',
+	13=>'OPTIPLEX 9010',
+	12=>'OPTIPLEX 960',
+	2=>'OPTIPLEX 990',
+	31=>'OPTIPLEX GX 620',
+	29=>'OPTIPLEX GX280',
+	23=>'PHOTOSMART C7280',
+	28=>'PROBOOK 640 G1',
+	19=>'PROBOOK 645 G2',
+	24=>'X656DE',
+);
+
+$arreglo_ubicacion = array (
+	65=>'CAC PLAYAS',
+	145=>'OYM',
+	99=>'EGRESOS',
+	102=>'CAJAS',
+	70=>'CAC PLAZA RIO',
+	66=>'CAC RIO',
+	64=>'CAC 5 Y 10',
+	74=>'CAC ROSARITO',
+	73=>'CAC TECATE',
+	86=>'CAC CABO',
+	87=>'CAC SAN JOSE',
+	158=>'CAE LOS CABOS',
+	77=>'CAC MEXICALI 1',
+	78=>'CAC MEXICALI 2',
+	79=>'CAC MEXICALI 3',
+	80=>'CAC MEXICALI 4',
+	81=>'CAC SAN LUIS RIO COLORADO',
+	82=>'CAC LA PAZ 1',
+	83=>'CAC LA PAZ 2',
+	84=>'CAC LA PAZ 3',
+	54=>'CCT RIO',
+	54=>'CCT PLAZA RIO',
+	82=>'CAC LA PAZ 1',
+	68=>'CAC MONARCA',
+	146=>'CAE RIO',
+	106=>'CAE MEXICALI',
+	76=>'CAC ENSENADA 2',
+	75=>'CAC ENSENADA 1',
+	58=>'CAD 5 Y 10 (DISTRIBUCION)',
+	76=>'CAC ENSENADA 2',
+	67=>'CAC MACROPLAZA',
+);
+
+// http://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=570:arrays-asociativos-en-php-arreglos-concepto-y-formas-de-declaracion-y-uso-ejercicios-resueltos-cu00825b&catid=70&Itemid=193
+
+//$arreglo_marcas[1] = 'DELL';
 
 // Se obtienen el número total de elementos de los arreglo_modelos
-$total_marcas = count($arreglo_marcas);
-$total_modelos = count($arreglo_modelos);
+//$total_marcas = count($arreglo_marcas);
+//$total_modelos = count($arreglo_modelos);
 
-// Recorrido de los arreglos.
-for ($i=0;$i<$total_marcas;$i++)
+class actualizar
 {
-	$arreglo_marcas[$i];
-	$model = new Crud;
-	$model->update = "t_inventario_temporal";
-	//$model->set  = "Marca_g='$valor_nuevo'";
-	$model->set  = "Modelo_g='$valor_nuevo'";
-	$model->condition = "Modelo_g ='$campo_act'";
-	$model->Update();
+	public $opcion;
+	public $indice;
 
-}
-modelos(arreglo_marcas);
-
-
-
-function modelos(nombre_modelo)
-{
-	for
-	switch ($campo_act)
-		{
-			case "ELITEDESK 705 G1 SFF":
-				$valor_nuevo = "1";
-				break;
-
-
-}
-
-marcas($campo_act);
-modelos($campo_act);
-
-			switch ($campo_act)
-				{
-					case "ELITEDESK 705 G1 SFF":
-						$valor_nuevo = "1";
-						break;
-					case 'OptiPlex 9010':
-						$valor_nuevo = "13";
-						break;
-					case "PROBOOK 640 G2":
-						$valor_nuevo = "18";
-						break;
-					case "PROBOOK 645 G1":
-						$valor_nuevo = "19";
-						break;
-					case "MX711DE":
-						$valor_nuevo = "21";
-						break;
-					case "FX-2190":
-						$valor_nuevo = "22";
-						break;
-					case "PHOTOSMART C7280":
-						$valor_nuevo = "23";
-						break;
-					case "X656DE":
-						$valor_nuevo = "24";
-						break;
-					case "LASERJET 5000 COLOR":
-						$valor_nuevo = "25";
-						break;
-					case "DR-2050C":
-						$valor_nuevo = "26";
-						break;
-					case "OptiPlex 960":
-						$valor_nuevo = "12";
-						break;
-					case "COMPAQ DC7800":
-						$valor_nuevo = "27";
-						break;
-					case "COMPAQ PRO 6305 SFF":
-						$valor_nuevo = "28";
-						break;
-					case "'OptiPlex 990":
-						$valor_nuevo = "2";
-						break;
-					case "OptiPlex GX280":
-						$valor_nuevo = "29";
-						break;
-					case "OPTIPLEX GX 620":
-						$valor_nuevo = "31";
-						break;
-					//case "LASERJET M401DNE":
-					case "":
-						$valor_nuevo = "30";
-						break;
-
+	function actualiza_datos()
+	{
+		$opcion = $this->opcion;
+		$indice = $this->indice;
+		$indice_letra = (string)$indice;
 /*
-					case 'DELL':
-						$valor_nuevo = "9";
-						break;
-					case 'HP':
-						$valor_nuevo = "18";
-						break;
-					case 'XEROX':
-							$valor_nuevo = "18";
-							break;
-					case 'LEXMARK':
-							$valor_nuevo = "15";
-							break;
-					case 'EPSON':
-							$valor_nuevo = "16";
-							break;
-					case 'CANNON':
-							$valor_nuevo = "19";
-							break;
-					case 'LENOVO':
-							$valor_nuevo = "20";
-							break;
+		echo '<br/>';
+		echo 'Valor de opcion = '.$opcion;
+		//Pasandolo el valor de "Indice" de nuevo a cadena.
+
+		echo 'Valor de indice = '.$indice_letra;
+		echo '<br/>';
 */
 
-				}
-				echo "Valor que se tecleo ".$valor_nuevo;
+		$model = new Crud;
+		$model->update = "t_inventario_temporal2";
+		//$model->set  = "Marca_g='$indice_letra'";
+		//$model->condition = "Marca_g='$opcion'";
+		//$model->set  = "Modelo_g='$indice_letra'";
+		//$model->condition = "Modelo_g='$opcion'";
+		$model->set  = "Ubicacion='$indice_letra'";
+		$model->condition = "Ubicacion='$opcion'";
+		$model->Update();
 
-//			echo '<script type="text/javascript ">
-//				alert("Valor teclados");
-//			</script>'
+	}
+}
+
+$actualizador = new actualizar;
+
+// Recorrido de los arreglos.
+for ($i=0;$i<200;$i++)
+{
+// if (!empty($arreglo_marcas[$i]))
+// if (!empty($arreglo_modelos[$i]))
+	if (!empty($arreglo_ubicacion[$i]))
+	{
+		// Se obtiene el valor de la cadena del indice del arreglo asociativo
+		//$actualizador->opcion = $arreglo_marcas[$i];
+		//$actualizador->opcion = $arreglo_modelos[$i];
+		$actualizador->opcion = $arreglo_ubicacion[$i];
+		$actualizador->indice = $i;
+		$actualizador->actualiza_datos();
+	}
+}
+
+// http://aprende-web.net/php/php6_2.php
 
 
+/*
+
+switch ($i)
+	{
+		case 19:
+		//$actualizador->opcion = $arreglo_marcas[$i];
+		//$actualizador->indice = $i;
+		$actualizador->actualiza_datos();
+		break;
+	}
+
+*/
 
 
 ?>

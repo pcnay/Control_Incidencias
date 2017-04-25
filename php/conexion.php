@@ -23,7 +23,7 @@ email VarChar(100);
  			try
  			{
  				$this->conexion_db = new PDO('mysql:host=localhost; dbname=bd_sal_inst','tinexsn','Tinex2@16');
- 				
+
  				$this->conexion_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
  				$this->conexion_db->exec ("SET CHARACTER SET utf8");
 
@@ -31,7 +31,7 @@ email VarChar(100);
  			}
  			catch(Exception $e)
  			{
- 				echo " La línea de error es".$e->getLine();
+ 				echo " Error al Conectarse a la Base De Datos , la línea de error es => ".$e->getLine();
  			}
  		}
  	}

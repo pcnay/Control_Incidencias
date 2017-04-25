@@ -157,6 +157,12 @@ $('#nuevo-usuario').on('click',function(){
 	//return false;
 	});
 
+// Recargando el div "id_usuaraio"
+	$('#id_usuario').on('click',function(){
+			$('#id_usuario').load("../php/Inventarios/Componentes/cargar_usuario.php");
+
+		});
+
 
 // Seccion de Capturas de Marcas
 	$('#nueva-marca').on('click',function(){
@@ -183,6 +189,13 @@ $('#nuevo-usuario').on('click',function(){
 	});
 	//return false;
 	});
+
+	// Recargando el div "id_marca"
+		$('#id_marca').on('click',function(){
+			$('#id_marca').load("../php/Inventarios/Componentes/cargar_marca.php");
+
+			});
+
 
 // Seccion de Capturas de Modelos
 	$('#nuevo-modelo').on('click',function(){
@@ -215,6 +228,13 @@ $('#nuevo-usuario').on('click',function(){
 	});
 	//return false;
 	});
+
+	// Recargando el div "id_modelo"
+		$('#id_modelo').on('click',function(){
+			$('#id_modelo').load("../php/Inventarios/Componentes/cargar_modelo.php");
+
+			});
+
 
 	// Determina si el Checkbox esta "Seleccionado" o "Deseleccionado"
 	$('#especif').on( 'change', function() {
@@ -356,9 +376,17 @@ $('#bs-componente').on('keyup',function(){
 	//return false;
 	});
 
-// Agregar otros etiquetas
+// Recargando el div "id_usuaraio"
+	$('#id_componente').on('click',function(){
+		$('#id_componente').load("../php/Inventarios/Componentes/cargar_componente.php");
+
+		});
+
+// Agregar otros componentes del DOM
+
 
 });
+
 
 
 // Seccion para el manejo de la pantalla de Login
