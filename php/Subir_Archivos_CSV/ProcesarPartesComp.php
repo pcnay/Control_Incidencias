@@ -25,8 +25,41 @@
 			// Si la línea no es igual a 1 guarda el registro, ya que el reg. 1 es los titulos.
 			if ($row != 1)
 				{
-					// Se inicia el proceso de copia de los registros del "Inventario Temporal" a Partes de computadoras"
-					 
+					// En la primera vuelta se analiza los datos del Gabinete
+										// Se inicia el proceso de copia de los registros del "Inventario Temporal" a Partes de computadoras"
+					switch ($data[1])
+						{
+							case 'L':
+								{
+										$data[1] = '8';
+										$dato[1] = (int)$data[1];
+										$data[1] = 'NA';
+										break;
+								}
+
+							case 'I':
+								{
+											$data[1] = '6';
+											$dato[1] = (int)$data[1];
+											$data[1] = 'NA';
+											break;
+									}
+							case 'C':
+								{
+											$data[1] = '7';
+											$dato[1] = (int)$data[1];
+											$data[1] = 'NA';
+											break;
+									}
+
+
+						}
+
+						echo " Valor de Componente Computadora ",$dato[1];
+						echo "<br  />";
+
+
+/*
 						$sql_guardar = "INSERT INTO t_componente_comp(nomenclatura,ip,serial,num_inventario,posicion,t_usuarios_id_usuario,t_marca_id_marca,t_modelo_id_modelo,t_partecomp_id_partecomp
 						)";
 						$datos[6] = (int)$data[6];
@@ -45,6 +78,8 @@
 							echo "<div>Problemas al importar el archivo </div>";
 							exit;
 						}
+*/
+
 				}
 
 			$row++;
@@ -72,9 +107,10 @@
 		// usando "h ref" en PHP
 		echo "<a href = \"/folios/menu.php\">Menu General </a>";
 
-
-		fclose($fp);
-
+			fclose($fp);
 
 	}
+
+
+
 ?>
