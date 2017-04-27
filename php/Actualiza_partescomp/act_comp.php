@@ -4,6 +4,7 @@
 
 			//  cada ../ es una carpeta que sube, en este caso son dos carpetas "Deptos" y "php"
 
+
 //$campo_act = addslashes($_POST['campo_act']);
 $arreglo_marcas = array (
 	19=>'CANNON',

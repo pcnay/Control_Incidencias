@@ -12,8 +12,8 @@ email VarChar(100);
 
  */
 
-	$cn = mysql_connect("localhost","tinexsn","Tinex2@16");
-	mysql_select_db("bd_sal_inst",$cn) or die (mysql_error());
+	//$cn = mysql_connect("localhost","tinexsn","Tinex2@16");
+	//mysql_select_db("bd_sal_inst",$cn) or die (mysql_error());
 
 
  	class Conexion
@@ -24,7 +24,7 @@ email VarChar(100);
  			try
  			{
  				$this->conexion_db = new PDO('mysql:host=localhost; dbname=bd_sal_inst','tinexsn','Tinex2@16');
- 				
+
  				$this->conexion_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
  				$this->conexion_db->exec ("SET CHARACTER SET utf8");
 

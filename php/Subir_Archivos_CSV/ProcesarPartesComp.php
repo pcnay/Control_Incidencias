@@ -1,6 +1,9 @@
 <?php
 	include("conexion.php");
 
+	// usando "h ref" en PHP
+	echo "<a href = \"/folios/php/subir_archivos_csv/index.php\">Indice</a>";
+
 	// Determina si es un archivo "CVS"
 	if (substr($_FILES['excel']['name'],-3)=="csv")
 	{
@@ -19,7 +22,7 @@
 		$fp = fopen("$carpeta$excel","r");
 
 		//fgetcsv Obtiene los valores que estan en el "csv" y los extrae, que estan separados por ","
-
+		$reg_procesados = 0;
 		while ($data = fgetcsv($fp,5000,","))
 		{
 			// Si la línea no es igual a 1 guarda el registro, ya que el reg. 1 es los titulos.
@@ -80,37 +83,22 @@
 						}
 */
 
-				}
+				} // ($row != 1)
 
 			$row++;
-		}
 
-		if ($num_nvo > 0)
-		{
-	//		echo "Registros Nuevos : ".$num_nvo.;
-			echo "Registro Nuevos : ".$num_nvo;
-			echo "Valor del reg. Agregado : ".$data[0];
-		}
-		else
-		{
-			echo "Registros Actualizados :".$num_act;
-	//		echo "Registros Actualziados : ".$num_act.;
-		}
-
-
-		// $num = count($data)
-		//echo "El arreglo contiene ".$num.;
-		// header("Location:http://localhost/Folios/menu.php");
+		} // while ($data = fgetcsv($fp,5000,","))
+		echo "Registros procesados : ".$row;
 		echo "<br>";
 		echo "<br>";
 
 		// usando "h ref" en PHP
-		echo "<a href = \"/folios/menu.php\">Menu General </a>";
+		echo "<a href = \"/folios/php/subir_archivos_csv/index.php\">Indice</a>";
 
 			fclose($fp);
 
-	}
+	} // if (substr($_FILES['excel']['name'],-3)=="csv")
 
-
+// http://localhost/folios/php/subir_archivos_csv/Procesarpartescomp.php
 
 ?>

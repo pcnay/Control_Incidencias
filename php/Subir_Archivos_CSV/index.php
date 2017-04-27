@@ -15,7 +15,7 @@
 					return false;
 				}
 
-				document.frmSubirArchivo.action="Procesar.php";
+				document.frmSubirArchivo.action="procesarpartescomp.php";
 				//document.frmSubirArchivo.action="procesar.php"; Para los inventario se activa esta línea
 				document.frmSubirArchivo.submit();
 
@@ -32,7 +32,7 @@
 
 					<p>Archivo Excel </p>
 					<!-- Muestra una barra con el boton de "examinar" -->
-					<p><input type = "file" name ="excel" /></p> 
+					<p><input type = "file" name ="excel" /></p>
 
 					<p><input type = "button" value ="Subir Archivo" onclick ="subirArchivoExcel();"/></p>
 
@@ -45,5 +45,3 @@
 	</body>
 
 </html>
-
-
