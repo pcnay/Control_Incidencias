@@ -1,0 +1,4 @@
+Nomenclatura,Componente,IP,Marca_g,Modelo_g,Serie_g,Inventario_g,Marca_m,Modelo_m,Serie_m,Inventario_m,Marca_t,Modelo_t,Serie_t,Marca_r,Modelo_r,Serie_r,Serie_Pila,Usuario_Univ,Posicion,Ubicación
+TVC48C801DMXR1,C,10.0.146.67,HP,COMPAQ PRO 6305 SFF,MXL41001FN,,,,,,,,,,,,,48C8,ANALISTA,CAE RIO
+TIS238401LMXR1,L,192.1.209.41,DELL,LATITUDE E6430,DYD0XY1,,,,,,,,,,,,,2384,JEFATURA CONMUTACION,ALFER - 1ER PISO
+TOP079401DMXR1,C,192.1.203.60,DELL,OPTIPLEX 9010,JWR5DX1,,,,,,,,,,,,,794,JEFATURA OPERACIONES,ALFER 2DO PISO
